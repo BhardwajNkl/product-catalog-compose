@@ -1,8 +1,7 @@
 services:
   ui:
-    image: product-catalog-ui:2.0
     build:
-      context: ./product-catalogue-angular-frontent
+      context: https://github.com/BhardwajNkl/product-catalogue-angular-frontent.git
       dockerfile: Dockerfile
     ports:
       - "8080:80"
@@ -10,9 +9,8 @@ services:
       - backend
 
   backend:
-    image: product-catalog-backend:1.0
     build:
-      context: ./product-catalogue-springboot-backend
+      context: https://github.com/BhardwajNkl/product-catalogue-springboot-backend.git
       dockerfile: Dockerfile
     ports:
       - "9192:9192"
