@@ -1,6 +1,5 @@
 services:
   ui:
-    image: product-catalog-ui:1.0
     build:
       context: https://github.com/BhardwajNkl/product-catalogue-angular-frontent.git
       dockerfile: Dockerfile
@@ -10,7 +9,6 @@ services:
       - backend
 
   backend:
-    image: product-catalog-backend:1.0
     build:
       context: https://github.com/BhardwajNkl/product-catalogue-springboot-backend.git
       dockerfile: Dockerfile
